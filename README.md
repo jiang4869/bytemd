@@ -167,7 +167,7 @@ editor.$on('change', (e) => {
 | `placeholder` | `string` | Editor placeholder |
 | `editorConfig` | [documentation](https://codemirror.net/doc/manual.html#config) | CodeMirror editor config |
 | `locale` |  | i18n locale. Available locales could be found at `bytemd/locales`, default: use `en.json` |
-| `uploadImages` | `function` | Specify how to upload images. If set, the image icon will appear on the toolbar |
+| `uploadImages` | `(files: File[]) => Promise<Pick<Image, 'url' | 'alt' | 'title'>[]>` | Specify how to upload images. If set, the image icon will appear on the toolbar |
 | `maxLength` | `number` | Maximum length (number of characters) of value |
 
 ### Style customization
